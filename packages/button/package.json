@@ -1,0 +1,40 @@
+{
+  "name": "@nirvana-ui/button",
+  "version": "0.0.1",
+  "description": "> TODO: description",
+  "author": "Quentin Guenther <qguenther@outlook.com>",
+  "homepage": "https://github.com/QuentinGuenther/nirvana-ui#readme",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "directories": {
+    "lib": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "src"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QuentinGuenther/nirvana-ui.git"
+  },
+  "scripts": {
+    "compile": "rollup -c",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "@nirvana-ui/design-tokens": "^0.0.1"
+  },
+  "bugs": {
+    "url": "https://github.com/QuentinGuenther/nirvana-ui/issues"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.2",
+    "@babel/preset-react": "^7.16.7",
+    "react": "^17.0.2",
+    "rollup": "^2.67.2",
+    "rollup-plugin-babel": "^4.4.0"
+  }
+}

@@ -1,7 +1,15 @@
 {
   "name": "root",
   "private": true,
+  "workspaces": [
+    "packages/*",
+    "docs"
+  ],
   "devDependencies": {
     "lerna": "^4.0.0"
+  },
+  "dependencies": {},
+  "scripts": {
+    "build-storybook": "build-storybook"
   }
 }
