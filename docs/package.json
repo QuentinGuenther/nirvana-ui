@@ -1,6 +1,7 @@
 {
   "name": "docs",
-  "version": "0.0.0",
+  "version": "0.0.2",
+  "private": true,
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
@@ -13,9 +14,9 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
-  "dependencies": {},
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
-  }
+  },
+  "gitHead": "4da9b3c7f8248c6ab22e34c190dacfabe4be28b0"
 }

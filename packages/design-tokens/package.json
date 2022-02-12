@@ -1,6 +1,6 @@
 {
   "name": "@nirvana-ui/design-tokens",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "> TODO: description",
   "author": "Quentin Guenther <qguenther@outlook.com>",
   "homepage": "",
@@ -18,5 +18,6 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
-  }
+  },
+  "gitHead": "4da9b3c7f8248c6ab22e34c190dacfabe4be28b0"
 }
