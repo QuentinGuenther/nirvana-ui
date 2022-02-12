@@ -6,6 +6,7 @@
   "homepage": "https://github.com/QuentinGuenther/nirvana-ui#readme",
   "license": "MIT",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "directories": {
     "lib": "src",
     "test": "__tests__"
@@ -18,10 +19,14 @@
   },
   "repository": {
     "type": "git",
+    "directory": "packages/button",
     "url": "git+https://github.com/QuentinGuenther/nirvana-ui.git"
   },
   "scripts": {
-    "compile": "rollup -c",
+    "clean": "rimraf dist",
+    "prepack": "yarn build",
+    "build": "yarn clean && yarn compile",
+    "compile": "tsc --build && cp \"./package.json\" ./dist/",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
@@ -31,11 +36,7 @@
     "url": "https://github.com/QuentinGuenther/nirvana-ui/issues"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.2",
-    "@babel/preset-react": "^7.16.7",
-    "react": "^17.0.2",
-    "rollup": "^2.67.2",
-    "rollup-plugin-babel": "^4.4.0"
+    "react": "^17.0.2"
   },
   "gitHead": "4da9b3c7f8248c6ab22e34c190dacfabe4be28b0"
 }

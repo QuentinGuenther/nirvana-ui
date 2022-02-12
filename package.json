@@ -6,10 +6,14 @@
     "docs"
   ],
   "devDependencies": {
-    "lerna": "^4.0.0"
+    "jest": "^27.5.1",
+    "lerna": "^4.0.0",
+    "typescript": "^4.5.5"
   },
   "dependencies": {},
   "scripts": {
-    "build-storybook": "build-storybook"
+    "build": "lerna run build --stream",
+    "lint": "lerna run lint --stream --parallel",
+    "test": "yarn jest --coverage"
   }
 }
