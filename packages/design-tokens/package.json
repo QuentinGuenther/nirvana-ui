@@ -1,0 +1,22 @@
+{
+  "name": "@nirvana-ui/design-tokens",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Quentin Guenther <qguenther@outlook.com>",
+  "homepage": "",
+  "license": "MIT",
+  "main": "src/index.js",
+  "directories": {
+    "lib": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  }
+}
