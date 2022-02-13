@@ -18,5 +18,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "gitHead": "4da9b3c7f8248c6ab22e34c190dacfabe4be28b0"
+  "gitHead": "4da9b3c7f8248c6ab22e34c190dacfabe4be28b0",
+  "dependencies": {
+    "@nirvana-ui/design-tokens": "^0.0.3"
+  }
 }

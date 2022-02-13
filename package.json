@@ -12,6 +12,7 @@
   },
   "dependencies": {},
   "scripts": {
+    "storybook": "cd docs && yarn storybook",
     "build": "lerna run build --stream",
     "lint": "lerna run lint --stream --parallel",
     "test": "yarn jest --coverage"

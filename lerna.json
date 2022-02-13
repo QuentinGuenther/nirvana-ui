@@ -1,11 +1,16 @@
 {
   "packages": ["packages/*"],
-  "version": "0.0.3",
+  "version": "0.0.0-beta.0",
   "npmClient": "yarn",
   "useWorkspaces": true,
   "command": {
     "version": {
-      "ignoreChanges": ["*.md", "*.stories.@(js|jsx|ts|tsx)"],
+      "allowBranch": "master",
+      "ignoreChanges": [
+        "*.md",
+        "*.stories.(js|jsx|ts|tsx)",
+        "*.spec.(js|jsx|ts|tsx)"
+      ],
       "npmClient": "yarn",
       "message": "chore(release): publish"
     },

@@ -1,9 +1,9 @@
 {
-  "name": "@nirvana-ui/design-tokens",
+  "name": "@nirvana-ui/typography",
   "version": "0.0.3",
   "description": "> TODO: description",
   "author": "Quentin Guenther <qguenther@outlook.com>",
-  "homepage": "",
+  "homepage": "https://github.com/QuentinGuenther/nirvana-ui#readme",
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -17,6 +17,10 @@
   "publishConfig": {
     "access": "public"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QuentinGuenther/nirvana-ui.git"
+  },
   "scripts": {
     "clean": "rimraf dist",
     "prepack": "yarn build",
@@ -24,5 +28,15 @@
     "compile": "tsc --build && cp \"./package.json\" ./dist/",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
-  "gitHead": "4da9b3c7f8248c6ab22e34c190dacfabe4be28b0"
+  "dependencies": {
+    "@types/styled-components": "^5.1.22",
+    "@types/styled-system": "^5.1.15",
+    "react": "^17.0.2",
+    "styled-components": "^5.3.3",
+    "styled-system": "^5.1.5",
+    "typescript-plugin-styled-components": "^2.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/QuentinGuenther/nirvana-ui/issues"
+  }
 }
