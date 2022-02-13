@@ -1,7 +1,7 @@
 import * as React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Text } from "../src/componets/text";
-import { Title } from "../src/componets/heading";
+import { Text } from "../src/components/text";
+import { Title } from "../src/components/heading";
 
 export default {
   title: "Typography/Title/Two",
