@@ -1,6 +1,6 @@
 {
   "name": "@nirvana-ui/button",
-  "version": "0.0.3",
+  "version": "1.0.0-beta.0",
   "description": "> TODO: description",
   "author": "Quentin Guenther <qguenther@outlook.com>",
   "homepage": "https://github.com/QuentinGuenther/nirvana-ui#readme",
@@ -30,7 +30,7 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@nirvana-ui/design-tokens": "^0.0.3"
+    "@nirvana-ui/design-tokens": "^1.0.0-beta.0"
   },
   "bugs": {
     "url": "https://github.com/QuentinGuenther/nirvana-ui/issues"
