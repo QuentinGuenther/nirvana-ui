@@ -5,8 +5,8 @@
     "module": "commonjs",
     "jsx": "react",
     "strict": true,
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": false,
+    "esModuleInterop": false,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   }

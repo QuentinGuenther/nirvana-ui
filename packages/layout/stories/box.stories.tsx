@@ -1,12 +1,18 @@
 import * as React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Box } from "../src/componets/box";
+import { ComponentMeta } from "@storybook/react";
+import { Box } from "../src/components/box";
 
 export default {
-  title: "Layout/Box",
+  title: "Components / Layout / Box",
   component: Box,
+  argTypes: {
+    backgroundColor: { control: "color" },
+  },
 } as ComponentMeta<typeof Box>;
 
-export const Paragraph: ComponentStory<typeof Box> = () => (
-  <Box height={"300px"} />
-);
+const Template = (args) => <Box {...args} />;
+
+export const Basic = Template.bind({});
+Basic.args = {
+  backgroundColor: "#00FF00",
+};
