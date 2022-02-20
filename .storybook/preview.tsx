@@ -1,4 +1,4 @@
-import { ResetCSS, ThemeProvider } from '@nirvana-ui/design-tokens'
+import { ResetCSS, ThemeProvider } from "@nirvana-ui/design-tokens";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -8,7 +8,7 @@ export const parameters = {
       date: /Date$/,
     },
   },
-}
+};
 
 export const decorators = [
   (Story) => (

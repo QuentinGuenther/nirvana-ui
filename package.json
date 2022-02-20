@@ -6,13 +6,22 @@
     "docs"
   ],
   "devDependencies": {
+    "@babel/core": "^7.17.5",
     "@commitlint/cli": "^16.2.1",
     "@commitlint/config-conventional": "^16.2.1",
+    "@storybook/addon-actions": "^6.4.19",
+    "@storybook/addon-essentials": "^6.4.19",
+    "@storybook/addon-links": "^6.4.19",
+    "@storybook/react": "^6.4.19",
+    "babel-loader": "^8.2.3",
     "husky": "^7.0.4",
     "jest": "^27.5.1",
     "lerna": "^4.0.0",
     "pinst": "^2.1.6",
     "prettier": "^2.5.1",
+    "react": "^17.0.2",
+    "react-docgen-typescript": "^2.2.2",
+    "react-dom": "^17.0.2",
     "typescript": "^4.5.5"
   },
   "lint-staged": {
@@ -22,15 +31,10 @@
     "postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable",
-    "storybook": "cd docs && yarn storybook",
     "build": "lerna run build --stream",
     "lint": "lerna run lint --stream --parallel",
-    "test": "yarn jest --coverage"
-  },
-  "dependencies": {
-    "@storybook/addon-actions": "^6.4.19",
-    "@storybook/addon-essentials": "^6.4.19",
-    "@storybook/addon-links": "^6.4.19",
-    "@storybook/react": "^6.4.19"
+    "test": "yarn jest --coverage",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   }
 }
