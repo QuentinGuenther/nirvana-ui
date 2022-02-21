@@ -1,10 +1,18 @@
 {
   "name": "root",
   "private": true,
+  "version": "0.0.0-development",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/QuentinGuenther/nirvana-ui.git"
+  },
   "workspaces": [
     "packages/*",
     "docs"
   ],
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
   "devDependencies": {
     "@babel/core": "^7.17.5",
     "@commitlint/cli": "^16.2.1",
@@ -22,10 +30,8 @@
     "react": "^17.0.2",
     "react-docgen-typescript": "^2.2.2",
     "react-dom": "^17.0.2",
-    "typescript": "^4.5.5"
-  },
-  "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "typescript": "^4.5.5",
+    "semantic-release": "^19.0.2"
   },
   "scripts": {
     "postinstall": "husky install",
@@ -35,6 +41,7 @@
     "lint": "lerna run lint --stream --parallel",
     "test": "yarn jest --coverage",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "semantic-release": "semantic-release"
   }
 }
