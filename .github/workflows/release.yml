@@ -1,9 +1,7 @@
 name: Release
 on:
-  push:
-    types: [closed]
-    branches:
-      - master
+  pull_request:
+    types: [opened, synchronize]
 jobs:
   release:
     name: Release
