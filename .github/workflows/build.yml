@@ -1,5 +1,7 @@
-name: Release
-on: push
+name: Build
+on:
+  pull_request:
+    types: [opened, synchronize]
 jobs:
   release:
     name: Build
@@ -15,6 +17,8 @@ jobs:
           node-version-file: ".nvmrc"
           cache: "yarn"
       - name: Install dependencies
-        run: yarn install
+        run: |
+          yarn install
+          yarn lerna bootstrap
       - name: Build Packages
-        run: yarn build
+        run: yarn lerna test
