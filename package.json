@@ -10,6 +10,9 @@
     "packages/*",
     "docs"
   ],
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
   "devDependencies": {
     "@babel/core": "^7.17.5",
     "@commitlint/cli": "^16.2.1",
@@ -29,9 +32,6 @@
     "react-dom": "^17.0.2",
     "typescript": "^4.5.5",
     "semantic-release": "^19.0.2"
-  },
-  "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
   },
   "scripts": {
     "postinstall": "husky install",
