@@ -17,10 +17,9 @@ jobs:
         with:
           node-version-file: ".nvmrc"
           cache: "yarn"
-      - name: Install and Build 🔧
-        # This needs an Acces Token stored as "GH_TOKEN" 👇
-        run: |
-          yarn bootstrap
-          yarn deploy-storybook -- --ci
+      - name: Install
+        run: yarn bootstrap
+      - name: Deploy Storybook
+        run: yarn deploy-storybook
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
