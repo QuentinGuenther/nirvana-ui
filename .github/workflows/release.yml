@@ -20,12 +20,12 @@ jobs:
         with:
           node-version-file: ".nvmrc"
           cache: "yarn"
-          registry-url: "https://npm.pkg.github.com/"
+          registry-url: "https://registry.npmjs.org"
 
       - name: Ensure access
-        run: npm whoami --registry https://npm.pkg.github.com/
+        run: npm whoami --registry https://registry.npmjs.org
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Config git user
         run: |
@@ -40,4 +40,4 @@ jobs:
           yarn publish:ci
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
