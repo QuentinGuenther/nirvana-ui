@@ -22,4 +22,4 @@ jobs:
       - name: Deploy Storybook
         run: yarn deploy-storybook
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ github.actor }}:${{ secrets.GH_TOKEN }}
