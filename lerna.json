@@ -15,6 +15,7 @@
       "message": "chore(release): publish"
     },
     "publish": {
+      "registry": "https://npm.pkg.github.com/",
       "npmClient": "yarn"
     }
   }
