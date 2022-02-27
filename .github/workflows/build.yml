@@ -16,8 +16,5 @@ jobs:
         with:
           node-version-file: ".nvmrc"
           cache: "yarn"
-      - name: Install dependencies
-        run: |
-          yarn install
       - name: Build Packages
-        run: yarn lerna bootstrap
+        run: yarn bootstrap
