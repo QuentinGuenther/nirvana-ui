@@ -20,7 +20,7 @@ jobs:
       - name: Install and Build 🔧
         # This needs an Acces Token stored as "GH_TOKEN" 👇
         run: |
-          yarn install
+          yarn bootstrap
           yarn deploy-storybook -- --ci
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
