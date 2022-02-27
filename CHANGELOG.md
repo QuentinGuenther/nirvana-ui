@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-beta.3](https://github.com/QuentinGuenther/nirvana-ui/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2022-02-27)
+
+### Bug Fixes
+
+- publish to npm registry ([60d9948](https://github.com/QuentinGuenther/nirvana-ui/commit/60d9948d05f9ac290ec1fbd79056ef3b72f8eb4f))
+
 # [1.0.0-beta.2](https://github.com/QuentinGuenther/nirvana-ui/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2022-02-27)
 
 ### Features
