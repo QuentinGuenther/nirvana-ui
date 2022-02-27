@@ -1,32 +1,40 @@
 name: Release
+
 on:
   pull_request:
     types: [opened, synchronize]
+
 jobs:
-  release:
-    name: Release
-    # if: github.event.pull_request.merged == true
+  publish-gpr:
+    name: Publish to GPR
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
+
+      - uses: actions/setup-node@v1
         with:
           node-version-file: ".nvmrc"
           cache: "yarn"
-      - name: Install dependencies
-        run: yarn install
-      - name: "Version and Release"
+          registry-url: "https://npm.pkg.github.com/"
+
+      - name: Ensure access
+        run: npm whoami --registry https://npm.pkg.github.com/
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Config git user
         run: |
-          git config user.name "${{ github.actor }}"
-          git config user.email "${{ github.actor}}@users.noreply.github.com"
+          git config --global user.name "${{ github.actor }}"
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+      - name: Bootstrap lerna
+        run: yarn bootstrap
 
-          npx lerna version --conventional-commits --conventional-prerelease --preid beta --yes
-
-          npx lerna publish from-git --yes
+      - name: Bump versions and publish packages
+        run: |
+          yarn version:ci
+          yarn publish:ci
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
