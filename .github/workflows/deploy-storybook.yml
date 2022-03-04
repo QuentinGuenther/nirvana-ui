@@ -4,22 +4,11 @@ on:
     branches:
       - master
 jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
+  chromatic-deployment:
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - name: Publish to Chromatic
+        uses: chromaui/action@v1
         with:
-          fetch-depth: 0
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version-file: ".nvmrc"
-          cache: "yarn"
-      - name: Install
-        run: yarn bootstrap
-      - name: Deploy Storybook
-        run: yarn deploy-storybook
-        env:
-          GH_TOKEN: ${{ github.actor }}:${{ secrets.GH_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          exitZeroOnChanges: true
