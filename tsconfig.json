@@ -3,7 +3,7 @@
     "jsx": "react",
     "baseUrl": "./packages",
     "paths": {
-      "@namespace/button/*": ["button/src/*"]
+      "@nirvana-ui/design-tokens/*": ["packages/design-tokens/src/*"]
     }
   }
 }

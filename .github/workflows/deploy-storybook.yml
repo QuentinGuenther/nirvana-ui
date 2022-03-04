@@ -20,6 +20,8 @@ jobs:
           registry-url: "https://registry.npmjs.org"
       - name: Bootstrap lerna
         run: yarn bootstrap
+      - name: Build project
+        run: yarn build
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         with:

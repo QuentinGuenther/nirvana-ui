@@ -5,6 +5,7 @@
     "module": "commonjs",
     "jsx": "react",
     "strict": true,
+    "declaration": true,
     "allowSyntheticDefaultImports": false,
     "esModuleInterop": false,
     "skipLibCheck": true,
