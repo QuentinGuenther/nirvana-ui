@@ -5,12 +5,22 @@ on:
       - master
 jobs:
   chromatic-deployment:
-    name: Deploy to Chromatic
-    runs-on: ubuntu-latest
+    name: Deploy Storybook to Chromatic
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version-file: ".nvmrc"
+          cache: "yarn"
+          registry-url: "https://registry.npmjs.org"
+      - name: Bootstrap lerna
+        run: yarn bootstrap
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          exitZeroOnChanges: true
