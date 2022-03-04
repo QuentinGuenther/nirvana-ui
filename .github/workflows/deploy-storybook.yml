@@ -6,6 +6,7 @@ on:
 jobs:
   chromatic-deployment:
     name: Deploy Storybook to Chromatic
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
