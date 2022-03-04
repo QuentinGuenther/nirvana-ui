@@ -1,6 +1,11 @@
 export type tokensType = {
   colors: {
-    text: string;
+    text: {
+      dark: string;
+    };
+    background: {
+      light: string;
+    };
   };
   fontSizes: {
     title1: number;
@@ -22,56 +27,75 @@ export type tokensType = {
   fontFamilies: {
     title: string;
     base: string;
-    small: string;
+    monospace: string;
   };
   letterSpacings: {
     title: number;
     base: number;
-    small: number;
+    monospace: number;
   };
   wordSpacings: {
     title: number;
     base: number;
-    small: number;
+    monospace: number;
   };
-  space: number[];
+  space: {
+    xsmall: number;
+    small: number;
+    medium: number;
+    large: number;
+    xlarge: number;
+    paragraph: number;
+  };
 };
 
 export const tokens: tokensType = {
   fontSizes: {
-    title1: 36,
-    title2: 30,
-    title3: 26,
-    base: 21,
+    title1: 31,
+    title2: 26,
+    title3: 22,
+    base: 18,
     small: 16,
   },
   colors: {
-    text: "rgb(29, 29, 31)",
+    text: {
+      dark: "rgb(29, 29, 31)",
+    },
+    background: {
+      light: "rgb(50, 50, 50)",
+    },
   },
-  space: [0, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987],
+  space: {
+    xsmall: 4,
+    small: 8,
+    medium: 16,
+    large: 24,
+    xlarge: 36,
+    paragraph: 800,
+  },
   fontWeights: {
     light: 200,
     medium: 400,
     bold: 600,
   },
   lineHeights: {
-    title: 1.7,
+    title: 1.125,
     base: 1.5,
     small: 1.5,
   },
   letterSpacings: {
     title: 0.012,
     base: 0.012,
-    small: 0.012,
+    monospace: 0.012,
   },
   wordSpacings: {
     title: 0.016,
     base: 0.016,
-    small: 0.016,
+    monospace: 0.016,
   },
   fontFamilies: {
     title: '"Libre Franklin", sans-serif',
     base: '"Inter", sans-serif',
-    small: '"Inter", sans-serif',
+    monospace: '"Inter", sans-serif',
   },
 };
